@@ -1,9 +1,10 @@
 <template>
+  <base-card>
   <div class="hello">
     <h1>Tímový projekt 1</h1>
     <p>
       Webová stránka uvádza všetky informácie ohľadom nášho tímu a projektu v
-      rámci predmete TP1.
+      rámci predmetu TP1.
     </p>
     <br />
     <h2><b>Názov projektu:</b> Bezpečné úložisko pre kryptomeny</h2>
@@ -27,20 +28,8 @@
       riešenia a naprogramovanie základných častí aplikácie po API zvoleného
       HSM."
     </p>
-    <br />
-    <h2><b>Členovia tímu:</b></h2>
-    <div class="list_container">
-      <ul class="list">
-        <li>Adam Hamra, Bc.</li>
-        <li>Jakub Krajčík, Bc.</li>
-        <li>Ján Mikulec, Bc.</li>
-        <li>Marek Grežďo, Bc.</li>
-        <li>Marián Choma, Bc.</li>
-        <li>Peter Zigman, Bc.</li>
-        <li>Zsombor Kálmán Orosz, Bc.</li>
-      </ul>
-    </div>
   </div>
+  </base-card>
 </template>
 
 <script>
@@ -52,24 +41,24 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2, p{
+h1, h2, p {
   text-align: center;
 }
 .box {
   text-align: left;
-  margin-left: 15rem;
-  margin-right: 15rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
-.list_container {
+.container {
   text-align: center;
 }
-.list {
+.members_list {
   display: inline-block;
-  text-align: left;
+  text-align: center;
 }
-li {
-  display: inline-block;
-  text-align: left;
-  margin: 0 10px;
+.members_list li {
+  padding: .5rem;
+  list-style-type: none;
 }
+
 </style>
