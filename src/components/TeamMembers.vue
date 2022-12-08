@@ -3,7 +3,7 @@
     <h2><b>Členovia tímu:</b></h2>
     <div class="container">
       <ul class="members_list">
-        <li>Adam Hamra, Bc.</li>
+        <li>Adam Hamara, Bc.</li>
         <li>Ján Mikulec, Bc.</li>
         <li>Marek Grežďo, Bc.</li>
         <li>Marián Choma, Bc.</li>
