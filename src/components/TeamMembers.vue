@@ -4,7 +4,6 @@
     <div class="container">
       <ul class="members_list">
         <li>Adam Hamra, Bc.</li>
-        <li>Jakub Krajčík, Bc.</li>
         <li>Ján Mikulec, Bc.</li>
         <li>Marek Grežďo, Bc.</li>
         <li>Marián Choma, Bc.</li>

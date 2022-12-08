@@ -1,0 +1,243 @@
+<document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://petriflow.com/petriflow.schema.xsd">
+	<id>msus_cvicenie_behaviour_test</id>
+	<initials>MC5</initials>
+	<title>Cvicenie5</title>
+	<icon>device_hub</icon>
+	<defaultRole>true</defaultRole>
+	<anonymousRole>false</anonymousRole>
+	<transitionRole>false</transitionRole>
+	<data type="boolean">
+		<id>boolean_0</id>
+		<title>Ukázať aj ostané</title>
+		<init>false</init>
+	</data>
+	<data type="text">
+		<id>text_0</id>
+		<title>Skryté textové pole</title>
+	</data>
+	<data type="taskRef">
+		<id>taskRef_0</id>
+		<title/>
+		<init>t2</init>
+	</data>
+	<data type="text">
+		<id>text_1</id>
+		<title>Toto je pole z taskrefu</title>
+	</data>
+	<data type="enumeration">
+		<id>enumeration_0</id>
+		<title>Ukázať taskref formulár</title>
+		<options>
+			<option key="ano">ano</option>
+			<option key="nie">nie</option>
+		</options>
+	</data>
+	<data type="text">
+		<id>text_2</id>
+		<title/>
+		<init><![CDATA[<iframe class="ql-video" frameborder="0" allowfullscreen="true" src="https://www.youtube.com/embed/dQw4w9WgXcQ?showinfo=0"></iframe><p><br></p>]]></init>
+	</data>
+	<data type="i18n">
+		<id>i18n_0</id>
+		<title/>
+		<init>Druhý pod formulár</init>
+	</data>
+	<transition>
+		<id>t1</id>
+		<x>540</x>
+		<y>260</y>
+		<label>Vstupný formulár</label>
+		<dataGroup>
+			<id>t1_0</id>
+			<cols>4</cols>
+			<layout>grid</layout>
+			<dataRef>
+				<id>boolean_0</id>
+				<logic>
+					<behavior>editable</behavior>
+				</logic>
+				<layout>
+					<x>0</x>
+					<y>0</y>
+					<rows>1</rows>
+					<cols>2</cols>
+					<template>material</template>
+					<appearance>outline</appearance>
+				</layout>
+				<event type="set">
+					<id>boolean_0_set</id>
+					<actions phase="post">
+						<action id="1">t1: t.t1,
+text_0: f.text_0,
+boolean_0: f.boolean_0;
+make text_0, editable on t1 when { boolean_0.value }
+make text_0, required on t1 when { boolean_0.value }
+make text_0, hidden on t1 when { !boolean_0.value }</action>
+					</actions>
+				</event>
+			</dataRef>
+			<dataRef>
+				<id>text_0</id>
+				<logic>
+					<behavior>hidden</behavior>
+				</logic>
+				<layout>
+					<x>2</x>
+					<y>0</y>
+					<rows>1</rows>
+					<cols>2</cols>
+					<template>material</template>
+					<appearance>outline</appearance>
+				</layout>
+				<event type="set">
+					<id>text_0_set</id>
+					<actions phase="post">
+						<action id="2">i18n_0: f.i18n_0,
+t1: t.t1,
+taskRef_0: f.taskRef_0,
+text_0: f.text_0;
+make taskRef_0, editable on t1 when { text_0.value }
+make taskRef_0, hidden on t1 when { !text_0.value }
+make i18n_0, visible on t1 when { text_0.value }
+make i18n_0, hidden on t1 when { !text_0.value }</action>
+					</actions>
+				</event>
+			</dataRef>
+			<dataRef>
+				<id>taskRef_0</id>
+				<logic>
+					<behavior>hidden</behavior>
+				</logic>
+				<layout>
+					<x>0</x>
+					<y>2</y>
+					<rows>1</rows>
+					<cols>4</cols>
+					<template>material</template>
+					<appearance>outline</appearance>
+				</layout>
+			</dataRef>
+			<dataRef>
+				<id>i18n_0</id>
+				<logic>
+					<behavior>editable</behavior>
+				</logic>
+				<layout>
+					<x>0</x>
+					<y>1</y>
+					<rows>1</rows>
+					<cols>4</cols>
+					<template>material</template>
+					<appearance>outline</appearance>
+				</layout>
+				<component>
+					<name>divider</name>
+				</component>
+			</dataRef>
+		</dataGroup>
+		<event type="assign">
+			<id>t1_assign</id>
+		</event>
+		<event type="finish">
+			<id>t1_finish</id>
+		</event>
+		<event type="cancel">
+			<id>t1_cancel</id>
+		</event>
+		<event type="delegate">
+			<id>t1_delegate</id>
+		</event>
+	</transition>
+	<transition>
+		<id>t2</id>
+		<x>660</x>
+		<y>60</y>
+		<label>Taskrefovane</label>
+		<dataGroup>
+			<id>t2_0</id>
+			<cols>4</cols>
+			<layout>grid</layout>
+			<dataRef>
+				<id>enumeration_0</id>
+				<logic>
+					<behavior>editable</behavior>
+				</logic>
+				<layout>
+					<x>2</x>
+					<y>0</y>
+					<rows>1</rows>
+					<cols>2</cols>
+					<template>material</template>
+					<appearance>outline</appearance>
+				</layout>
+				<event type="set">
+					<id>enumeration_0_set</id>
+					<actions phase="post">
+						<action id="3">enumeration_0: f.enumeration_0,
+t2: t.t2,
+text_2: f.text_2;
+make text_2, visible on t2 when { enumeration_0.value.defaultValue == "ano" }
+make text_2, hidden on t2 when { enumeration_0.value.defaultValue == "nie" }</action>
+					</actions>
+				</event>
+			</dataRef>
+			<dataRef>
+				<id>text_2</id>
+				<logic>
+					<behavior>visible</behavior>
+				</logic>
+				<layout>
+					<x>0</x>
+					<y>1</y>
+					<rows>2</rows>
+					<cols>4</cols>
+					<template>material</template>
+					<appearance>outline</appearance>
+				</layout>
+				<component>
+					<name>htmltextarea</name>
+				</component>
+			</dataRef>
+		</dataGroup>
+		<event type="assign">
+			<id>t2_assign</id>
+		</event>
+		<event type="finish">
+			<id>t2_finish</id>
+		</event>
+		<event type="cancel">
+			<id>t2_cancel</id>
+		</event>
+		<event type="delegate">
+			<id>t2_delegate</id>
+		</event>
+	</transition>
+	<place>
+		<id>p1</id>
+		<x>420</x>
+		<y>260</y>
+		<tokens>1</tokens>
+		<static>false</static>
+	</place>
+	<place>
+		<id>p2</id>
+		<x>700</x>
+		<y>260</y>
+		<tokens>0</tokens>
+		<static>false</static>
+	</place>
+	<arc>
+		<id>a1</id>
+		<type>regular</type>
+		<sourceId>p1</sourceId>
+		<destinationId>t1</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
+	<arc>
+		<id>a2</id>
+		<type>regular</type>
+		<sourceId>t1</sourceId>
+		<destinationId>p2</destinationId>
+		<multiplicity>1</multiplicity>
+	</arc>
+</document>

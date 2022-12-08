@@ -4,6 +4,7 @@ import router from "./router";
 import { initializeApp } from "firebase/app";
 import BaseCard from "./components/ui/BaseCard.vue";
 import BaseButton from "./components/ui/BaseButton.vue";
+//import { getAuth } from "firebase/auth";
 
 const firebase = initializeApp({
   apiKey: "AIzaSyAJ6faCPX1moHLNXEsAwhTKX9gOmQGrsZ4",
@@ -14,11 +15,15 @@ const firebase = initializeApp({
   appId: "1:326946061346:web:9c018f3defaa77d0701e7b",
   measurementId: "G-4S549XTGV0"
 });
+//const auth = getAuth(firebase);
 
 const app = createApp(App);
 app.use(router);
 app.use(firebase);
 app.component("base-card", BaseCard);
 app.component("base-button", BaseButton);
+
+
+
 
 app.mount("#app");
