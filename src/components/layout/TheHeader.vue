@@ -13,6 +13,9 @@
             <router-link to="/">Home</router-link>
           </li>
           <li>
+            <router-link to="/progress">Progress</router-link>
+          </li>
+          <li>
             <router-link to="/records">Records</router-link>
           </li>
           <li>
