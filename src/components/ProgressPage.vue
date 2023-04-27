@@ -1,6 +1,9 @@
 <template>
   <base-card>
     <h1><b>Vývoj projektu v akad. roku: 22/23</b></h1><br><br>
+    <p>
+      Dokumentácia (priebežne aktualizovaná). <a href="https://docs.google.com/document/d/11-_DuK9NgnYM8DTnsIxtK4dlmoGphk23WkgMzpIvCzE/edit#" target="_blank">Tu</a>
+    </p><br><br>
     <h2>Zimný semester</h2>
     <div class="container">
       <ul class="progress_list">
