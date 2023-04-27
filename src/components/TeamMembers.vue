@@ -1,6 +1,6 @@
 <template>
   <base-card>
-    <h2><b>Členovia tímu:</b></h2>
+    <h1><b>Členovia tímu:</b></h1>
     <div class="container">
       <ul class="members_list">
         <li>Adam Hamara, Bc.</li>

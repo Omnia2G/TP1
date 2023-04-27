@@ -2,7 +2,7 @@
   <base-card>
     <base-card>
       <div>
-        <h3>Upload files</h3>
+        <h1>Upload files</h1>
         <label for="file-input" class="file">
           <img
             src="https://icons.iconarchive.com/icons/pelfusion/flat-folder/128/Upload-Folder-icon.png"
@@ -31,7 +31,7 @@
     </base-card>
     <base-card>
       <div>
-        <h3>Uploaded files:</h3>
+        <h1>Uploaded files:</h1>
         <ul>
           <li v-for="(item, index) in mylist" :key="index">
             <a :href="item.url" target="_blank">{{ item.name }}</a>

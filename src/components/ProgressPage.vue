@@ -1,7 +1,7 @@
 <template>
   <base-card>
-    <h2><b>Vývoj projektu v akad. roku: 22/23</b></h2><br><br>
-    <h3>Zimný semester</h3>
+    <h1><b>Vývoj projektu v akad. roku: 22/23</b></h1><br><br>
+    <h2>Zimný semester</h2>
     <div class="container">
       <ul class="progress_list">
         <li>
@@ -88,7 +88,7 @@
         </li>
       </ul>
     </div>
-    <br><h3>Letný semester</h3>
+    <br><h2>Letný semester</h2>
     <div class="container">
       <ul class="progress_list">
         <li>

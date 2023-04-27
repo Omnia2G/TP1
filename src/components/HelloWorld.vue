@@ -1,15 +1,15 @@
 <template>
   <base-card>
   <div class="hello">
-    <h1>Tímový projekt 1</h1>
+    <h1><b>Tímový projekt</b></h1>
     <p>
       Webová stránka uvádza všetky informácie ohľadom nášho tímu a projektu v
-      rámci predmetu TP1.
+      rámci predmetov TP1 a TP2.
     </p>
     <br />
     <h2><b>Názov projektu:</b> Bezpečné úložisko pre kryptomeny</h2>
     <br />
-    <h2><b>Zadávateľ/ia témy:</b> Július Šiška</h2>
+    <h2><b>Zadávateľ témy:</b> Július Šiška</h2>
     <br />
     <h2><b>Zadanie</b></h2>
     <p class="box">

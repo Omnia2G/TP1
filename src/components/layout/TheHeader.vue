@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="navbar">
-       <div class="brand-title">Tp1</div>
+       <div class="brand-title">Team project</div>
        <a href="" class="toggle-button" @click.prevent="toggle">
         <span class="bar"></span>
         <span class="bar"></span>
