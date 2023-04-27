@@ -25,7 +25,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  /*color: #2c3e50;*/
 }
   * {
   box-sizing: border-box;
@@ -33,7 +33,8 @@ export default {
 body {
   margin: 0;
   padding: 0;
-  background-color: #FDF4E3;
+  color: #011627;
+  background-color: #F9E2AF;
   /* background-color: #FFFFF5; */
 }
 .route-enter-from {

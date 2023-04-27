@@ -43,7 +43,8 @@ export default {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    /*background-color: 33;*/
+    background-color: #011627;
     color: white;
    
 }
@@ -70,13 +71,15 @@ export default {
 .navbar-links li a {
     display: block;
     text-decoration: none;
-    color: white;
+    /*color: white;*/
+    color: #FDFFFC;
     padding: 1.5rem;
     font-size: 1.5rem;
 }
 
 .navbar-links li:hover {
-    background-color: #555;
+    /*background-color: #555;*/
+    background-color: #343642;
     border-radius: 15px;
     
 }
